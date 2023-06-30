@@ -1,20 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function SaludoenIdiomas({ idioma }) {
-  if (idioma === "en") {
-    return <span>Hello every nya</span>;
-  } else {
-    return <span>Hola a todos nya</span>;
-  }
-}
-
 const Saludo = () => {
   const Name = "Gabriel";
+  const Lenguage = "en";
+
   return (
-    <p>
-      <SaludoenIdiomas idioma="en" /> {`${Name} :)`}
-    </p>
+    <div>
+      {Lenguage === "es" ? <p>Hola a todos nya</p> : <p>Hello every nya</p>}
+    </div>
   );
 };
 
