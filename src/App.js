@@ -1,22 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
 
-const Saludo = () => {
-  const Name = "Gabriel";
-  const Lenguage = "en";
+const nombres = ["Néstor", "Leslie", "Sophia", "Arianna", "Gabriel"];
 
-  return (
-    <div>
-      {Lenguage === "es" ? <p>Hola a todos nya</p> : <p>Hello every nya</p>}
-    </div>
-  );
+function getNombres() {
+  const elementList = [];
+  for (let i = 0; i < nombres.length; i++) {
+    elementList.push(<li>{nombres[i]}</li>);
+  }
+  return elementList;
+}
+
+const Nombres = () => {
+  return <ul>{getNombres()}</ul>;
 };
 
 const App = () => {
   return (
-    <h1>
-      <Saludo />
-    </h1>
+    <div>
+      <Nombres />
+    </div>
   );
 };
 
