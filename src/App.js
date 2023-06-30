@@ -11,7 +11,13 @@ function getNombres() {
 }
 
 const Nombres = () => {
-  return <ul>{getNombres()}</ul>;
+  return (
+    <ul>
+      {nombres.map((nombre, index) => (
+        <li key={index}>{nombre}</li>
+      ))}
+    </ul> // un .map requiere un identificador key, con una porpoiedad de tipo index para una mayor optimización
+  );
 };
 
 const App = () => {
