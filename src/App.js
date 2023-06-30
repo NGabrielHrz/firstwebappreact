@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function SaludoenIdiomas({ idioma }) {
+  if (idioma === "en") {
+    return <span>Hello every nya</span>;
+  } else {
+    return <span>Hola a todos nya</span>;
+  }
 }
+
+const Saludo = () => {
+  const Name = "Gabriel";
+  return (
+    <p>
+      <SaludoenIdiomas idioma="en" /> {`${Name} :)`}
+    </p>
+  );
+};
+
+const App = () => {
+  return (
+    <h1>
+      <Saludo />
+    </h1>
+  );
+};
 
 export default App;
