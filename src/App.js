@@ -1,23 +1,18 @@
 import "./App.css";
+import React, { useState } from "react";
 
-const nombres = ["Néstor", "Leslie", "Sophia", "Arianna", "Gabriel"];
-
-const Saludar = ({ nombres, idioma = "en" }) => {
-  // Forma correcta de asignar valores por defecto a un porp
-  console.log(idioma);
-  const saludo = idioma === "es" ? "Hola a todos" : "Hello every nya";
+const Button = () => {
+  const [counter, setCounter] = useState(0);
   return (
-    <p>
-      {saludo} {nombres}
-    </p>
-  );
-};
-
-const App = () => {
-  return (
-    <div>
-      <Saludar nombres="Gabriel" />
+    <div className="App">
+      <p className="Text1">El boton fue precionado {counter} veces</p>
+      <button onClick={() => setCounter(counter + 1)} className="Button1">
+        Click me!!
+      </button>
     </div>
   );
 };
+
+const App = () => <Button />;
+
 export default App;

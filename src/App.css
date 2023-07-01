@@ -32,7 +32,27 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.Text1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.Button1 {
+  color: white;
+  background-color: blue;
+  border-radius: 45px;
+  height: 35px;
+  border: 0px;
+}
+
+.Button1:hover {
+  cursor: pointer;
+  background-color: #0066ff;
+  transition: 0.3s;
 }
