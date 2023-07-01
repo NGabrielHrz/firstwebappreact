@@ -1,13 +1,26 @@
 import "./App.css";
-import React, { Component } from "react";
 
-// const App = () => <h1>Hello every nyas</h1>;
+const nombres = ["Néstor", "Leslie", "Sophia", "Arianna", "Gabriel"];
 
-class App extends Component {
-  state = {};
-  render() {
-    return <h1>Hello every nya, how are you</h1>;
-  }
-}
+const Saludar = ({ nombres, idioma }) => {
+  console.log(idioma);
+  const saludo = idioma === "es" ? "Hola a todos" : "Hello every nya";
+  return (
+    <p>
+      {saludo} {nombres}
+    </p>
+  );
+};
 
+Saludar.defaultProps = {
+  idioma: "en",
+}; // Forma no recomendada para asignar valores por defecto a un prop
+
+const App = () => {
+  return (
+    <div>
+      <Saludar nombres="Gabriel" />
+    </div>
+  );
+};
 export default App;
