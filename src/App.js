@@ -1,22 +1,22 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 
-const Button = () => {
-  const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    console.log("Me ejecute");
-  }, []);
-
+const Saludo = () => {
+  const [Name, setName] = useState("");
   return (
-    <div className="App">
-      <p className="Text1">El boton fue precionado {counter} veces</p>
-      <button onClick={() => setCounter(counter + 1)} className="Button1">
-        Click me!!
-      </button>
+    <div>
+      <input type="text" onChange={(ev) => setName(ev.target.value)} />
+      <p>Hola {Name}</p>
     </div>
   );
 };
 
-const App = () => <Button />;
+const App = () => {
+  return (
+    <div className="App">
+      <Saludo />
+    </div>
+  );
+};
 
 export default App;
